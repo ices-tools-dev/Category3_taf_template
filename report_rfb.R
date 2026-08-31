@@ -18,15 +18,15 @@ load("model/model_rfb.RData")
 ### Diagnostic plots
 ### ----------------------------------------------------------------------
 
-taf.png("r_b")
+taf.png("r_b_rfb")
 plot(r, b)
 dev.off()
 
-taf.png("f")
+taf.png("f_rfb")
 plot(f)
 dev.off()
 
-taf.png("lmean")
+taf.png("lmean_rfb")
 plot(lmean)
 dev.off()
 
