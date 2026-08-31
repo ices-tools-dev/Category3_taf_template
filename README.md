@@ -32,11 +32,10 @@ ices_cat_3_template/
   ├── boot/
   │   ├── DATA.bib              # metadata for raw data files
 │   └── initial/data/           # raw data files (real, or demo — see below)
-  ├── data.R, data_rfb.R
+├── data.R, data_rfb.R
 ├── model.R, model_rfb.R
 ├── output.R, output_rfb.R
 ├── report.R, report_rfb.R
-├── setup_example_data.R        # populates demo data (see below)
 ├── data/                       # created by data.R — cleaned data tables
   ├── model/                    # created by model.R — saved rule objects
   ├── output/                   # created by output.R — advice table
@@ -48,7 +47,7 @@ by running the pipeline — they aren't stored in version control.
  
 ## Requirements
  
-- R (version TBC — confirm minimum version for this project)
+- R (version 4.5.2)
 - [TAF](https://cran.r-project.org/package=TAF)
 - [`cat3advice`](https://github.com/shfischer/cat3advice), from the ICES
   r-universe:
@@ -61,10 +60,10 @@ by running the pipeline — they aren't stored in version control.
 - [`icesAdvice`](https://cran.r-project.org/package=icesAdvice) (for
   `icesRound()`, used to apply ICES rounding rules to the output table)
 - `officer` and `flextable` (only if exporting the advice table to Word)
-## Running the demo (no real stock data required)
- 
+## Running the demo 
+
 The pipeline can be run end-to-end against `cat3advice`'s built-in
-plaice (`ple.27.7e`) example dataset, without any real assessment data.
+plaice (`ple.27.7e`) example dataset.
 
 Run this once, to populate `boot/initial/data/` with the demo files:
   
@@ -170,14 +169,11 @@ with `TODO` comments rather than guessing at a real stock's schema —
 | rb     |  |
 | chr    |  |
  
-Note that `chr` does not use a length-based indicator (no `f` component),
-so a future `data_chr.R`/`model_chr.R` will not need the length data
-loading and `Lc`/`Lmean`/`Lref` steps that `rfb` requires.
- 
+
 ## Output table and rounding
  
-`output_rfb.R` builds a long-format (`parameter`/`value`) advice table
-from the `rfb` object's own slots, since `cat3advice::advice()` only
+`output_....R` builds a long-format (`parameter`/`value`) advice table
+from the object's own slots, since `cat3advice::advice()` only
 prints a formatted console table and does not return one. Rounding
 follows the ICES Advice Technical Guidelines via `icesAdvice::icesRound()`
 for ratios, multipliers, and percentages (`r`, `f`, `b`, `m`,
