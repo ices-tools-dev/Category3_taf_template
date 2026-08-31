@@ -6,8 +6,8 @@ stock assessments, structured as an [ICES Transparent Assessment Framework
 
 The advice rule calculations themselves are done by
 [`cat3advice`](https://github.com/shfischer/cat3advice), which implements
-the ICES rfb, rb, and chr harvest control rules. This repository does not
-reimplement any of that logic — it implements `cat3advice` using the standard
+the ICES *rfb*, *rb*, and *chr* harvest control rules. This repository does not
+reimplement any of that logic - it implements `cat3advice` using the standard
 TAF data/model/output/report pipeline, and adds a few quality-of-life
 features - a long-format advice table, ICES rounding, a Word export - on top.
 
