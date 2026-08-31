@@ -19,15 +19,15 @@ load("model/model_rfb.RData")
 ### ----------------------------------------------------------------------
 
 taf.png("r_b_rfb")
-plot(r, b)
+print(plot(r, b))
 dev.off()
 
 taf.png("f_rfb")
-plot(f)
+print(plot(f))
 dev.off()
 
 taf.png("lmean_rfb")
-plot(lmean)
+print(plot(f@Lmean))
 dev.off()
 
 ### ----------------------------------------------------------------------
