@@ -1,7 +1,7 @@
 ### output wrapper script
 
 
-source("output_rbf.R")
+source("output_rfb.R")
 
 ## source("output_rf.R)
 
