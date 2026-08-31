@@ -91,6 +91,46 @@ write.taf(idx, dir = "boot/initial/data")
 write.taf(length_data, dir = "boot/initial/data")
 ```
 
+Then create the data.BIB file, and save it to the 'boot' directory.
+
+```
+ 
+data_bib <- c(
+  '@Misc{advice_history.csv,',
+  '  originator = {cat3advice},',
+  '  year       = {2026},',
+  '  title      = {Demo catch and advice history -- plaice (ple.27.7e)',
+  '                example data from the cat3advice package.},',
+  '  period     = {1987-2022},',
+  '  access     = {Public},',
+  '  source     = {file},',
+  '}',
+  '',
+  '@Misc{idx.csv,',
+  '  originator = {cat3advice},',
+  '  year       = {2026},',
+  '  title      = {Demo biomass index -- plaice (ple.27.7e) example data',
+  '                from the cat3advice package.},',
+  '  period     = {2003-2021},',
+  '  access     = {Public},',
+  '  source     = {file},',
+  '}',
+  '',
+  '@Misc{length_data.csv,',
+  '  originator = {cat3advice},',
+  '  year       = {2026},',
+  '  title      = {Demo catch length data -- plaice (ple.27.7e) example',
+  '                data from the cat3advice package.},',
+  '  access     = {Public},',
+  '  source     = {file},',
+  '}'
+)
+ 
+writeLines(data_bib, "boot/DATA.bib")
+
+```
+
+
 Then run the pipeline:
   
   ```r
