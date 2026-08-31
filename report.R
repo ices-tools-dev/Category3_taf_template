@@ -1,6 +1,6 @@
 ## report wrapper script
 
-source("report_rbf.R")
+source("report_rfb.R")
 
 ## source("report_rb.R")
 
