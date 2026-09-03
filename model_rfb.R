@@ -40,12 +40,12 @@ lc_lstep      <- NULL  ### e.g. 20, if noisy; leave NULL otherwise
 # lref_Lc <- NULL   ### e.g. 264
 # Linf    <- NULL   ### e.g. 585
 # k             <- NULL  ### von Bertalanffy growth rate k, for multiplier m
-# discard_rate  <- NULL  ### proportion, e.g. 0.34
+# discard_rate  <- NULL  # percentage
 
 lref_Lc <- 264
 Linf    <- 585
 k       <- 0.10
-discard_rate <- 0.32
+discard_rate <- 32.0 # note: percentage (32%), not proportion (0.32)!
 
 
 ### ----------------------------------------------------------------------

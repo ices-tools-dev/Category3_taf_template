@@ -159,15 +159,15 @@ with `TODO` comments rather than guessing at a real stock's schema —
    catch units, `Itrigger` (first vs. repeat application), the `Lc`
    pooling window, `Linf`, `Lref`, the von Bertalanffy `k`, and the
    discard rate — the last of which is a **percentage** (e.g. `26.72`),
-   not a proportion.
+   not a proportion e.g. (`0.2672`).
 5. Run `taf.boot()` then `source.all()` as in the demo.
 ## Currently implemented methods
  
 | Method | Status |
 |--------|--------|
 | rfb    | Implemented (`data_rfb.R`, `model_rfb.R`, `output_rfb.R`, `report_rfb.R`) |
-| rb     |  |
-| chr    |  |
+| rb     | Implemented (`data_rb.R`, `model_rb.R`, `output_rb.R`, `report_rb.R`) |
+| chr    | Implemented (`data_chr.R`, `model_chr.R`, `output_chr.R`, `report_chr.R`) |
  
 
 ## Output table and rounding
